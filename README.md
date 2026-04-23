@@ -42,6 +42,20 @@ Systems Engineer with 2+ years of technical experience transitioning into Softwa
 
 ---
 
+## Featured Project: Agile Travel — Manual Testing
+
+**Test Cycles:** 1 | Valid & Invalid Scenarios | Full booking flow
+
+**Coverage:**
+- ✅ Flight selection (valid & invalid search scenarios)
+- ✅ Passenger details (correct and missing/invalid data)
+- ✅ Payment process (successful and failed payments)
+- ✅ Test cycle management via JIRA/Zephyr Scale
+
+**[View Project →](./02-Manual-Testing/AgileTravel-AirWay/)**
+
+---
+
 ## Tools & Technologies
 
 ### Testing Tools

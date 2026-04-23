@@ -1,0 +1,162 @@
+Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project lead id,Project description,Priority,Resolution,Assignee,Assignee Id,Reporter,Reporter Id,Creator,Creator Id,Created,Updated,Last Viewed,Resolved,Due date,Votes,Description,Environment,Watchers,Watchers Id,Original estimate,Remaining Estimate,Time Spent,Work Ratio,S Original Estimate,S Remaining Estimate,S Time Spent,Security Level,Inward issue link (Relates),Outward issue link (Relates),Attachment,Custom field (Actual Result),Custom field (Actual Result),Custom field (Development),Custom field (Expected Result),Custom field (Expected Result),Custom field (Goals),Custom field (Impact),Custom field (Impact),Custom field (Issue color),Custom field (Rank),Sprint,Custom field (Start date),Custom field (Steps to Reproduce),Custom field (Steps to reproduce),Custom field (Story point estimate),Custom field (Team),Parent,Parent key,Parent summary,Status Category,Status Category Changed
+Payment details --> Exceeding card numbers limits without validation,MA-10,10209,Bug,To Do,MA,MohammedAyman_AgileWay,software,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,Medium,,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,4/8/2026 5:31,4/8/2026 5:31,,,,0,"*Step to reproduce:*
+
+1- Go to payment screen
+2- add 24 number in the card number field (allowed is 16)
+3- Select valid travel data
+4- Click pay now
+
+*Expected Result:*
+
+The system should present an error message says card number shouldn’t exceed 16 numbers
+
+*Actual Result:*
+
+The system proceeded without showing any error message",,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,,,,,,,,,,08/Apr/26 5:28 AM;d891ed61-cf0d-4b09-a5f7-b72b504bea9e;image-20260408-032826.png;https://engmayman96.atlassian.net/rest/api/3/attachment/content/10080,,,,,,,,,,0|i0003j:,,,,,,,,,,To Do,4/8/2026 5:31
+Payment details --> Adding special characters to card holder name without validation,MA-9,10208,Bug,To Do,MA,MohammedAyman_AgileWay,software,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,Low,,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,4/8/2026 5:26,4/8/2026 5:26,,,,0,"*Step to reproduce:*
+
+1- Go to passenger details screen
+2- add special characters to last name
+4- Click next
+
+*Expected Result:*
+
+The system should present an error message and prevent proceeding 
+
+*Actual Result:*
+
+The system proceed to payment page without showing any error message",,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,,,,,,,,,,08/Apr/26 5:24 AM;d891ed61-cf0d-4b09-a5f7-b72b504bea9e;image-20260408-032408.png;https://engmayman96.atlassian.net/rest/api/3/attachment/content/10078,,,,,,,,,,0|i0003b:,,,,,,,,,,To Do,4/8/2026 5:26
+Flight Booking --> Return date is earlier than departure date without validation,MA-8,10207,Bug,To Do,MA,MohammedAyman_AgileWay,software,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,Medium,,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,4/8/2026 5:21,4/8/2026 5:21,,,,0,"*Step to reproduce:*
+
+1- Go to flight booking screen
+2- Select Return date to be earlier than departure date
+
+3- Select valid travel data 
+4- Click continue
+
+*Expected Result:*
+
+The system should present an error message and prevent proceeding when Return data is earlier than departure date
+
+*Actual Result:*
+
+The system allowed booking with Return data is earlier than departure date and proceeded without showing any error message",,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,,,,,,,,,,08/Apr/26 5:18 AM;d891ed61-cf0d-4b09-a5f7-b72b504bea9e;image-20260408-031833.png;https://engmayman96.atlassian.net/rest/api/3/attachment/content/10076,,,,,,,,,,0|i00033:,,,,,,,,,,To Do,4/8/2026 5:21
+Flight Booking --> Same origin and destination allowed without validation,MA-7,10206,Bug,To Do,MA,MohammedAyman_AgileWay,software,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,Highest,,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,4/8/2026 5:16,4/8/2026 5:16,,,,0,"*Step to reproduce:*
+
+1- Go to flight booking screen
+2- Select the same city for both origin and destination
+3- Select valid travel date(s)
+4- Click continue
+
+*Expected Result:*
+
+The system should present an error message and prevent proceeding when origin and destination are the same
+
+*Actual Result:*
+
+The system allowed booking with the same origin and destination and proceeded without showing any error message",,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,,,,,,,,,,08/Apr/26 5:16 AM;d891ed61-cf0d-4b09-a5f7-b72b504bea9e;image-20260408-031646.png;https://engmayman96.atlassian.net/rest/api/3/attachment/content/10074,,,,,,,,,,0|i0002v:,,,,,,,,,,To Do,4/8/2026 5:16
+Flight Booking --> Past departure date accepted without validation,MA-6,10205,Bug,To Do,MA,MohammedAyman_AgileWay,software,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,Highest,,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,4/8/2026 5:11,4/8/2026 5:13,4/8/2026 5:13,,,0,"*Step to reproduce:*
+
+1- Go to flight booking screen
+2- Select a departure date in the past
+3- Fill other required fields with valid data
+4- Click continue
+
+*Expected Result:*
+
+The system should present an error message and prevent proceeding when departure date is in the past
+
+*Actual Result:*
+
+The system accepted a past departure date and proceeded to the passenger details page without showing any error message",,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,,,,,,,,,,08/Apr/26 5:13 AM;d891ed61-cf0d-4b09-a5f7-b72b504bea9e;image-20260408-031343.png;https://engmayman96.atlassian.net/rest/api/3/attachment/content/10072,,,,,,,,,,0|i0002n:,,,,,,,,,,To Do,4/8/2026 5:11
+Flight Selection --> Multiple flight selection allowed without validation,MA-5,10204,Bug,To Do,MA,MohammedAyman_AgileWay,software,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,High,,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,4/8/2026 5:01,4/8/2026 5:01,,,,0,"*Step to reproduce:*
+
+1- Go to flight selection screen
+
+2- Providing valid data
+3- Select more than one flight at the same time
+4- Click continue
+
+*Expected Result:*
+
+The system should present an error message and prevent proceeding when multiple flights are selected
+
+*Actual Result:*
+
+The system allowed selecting multiple flights and proceeded to the passenger details page without showing any error message",,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,,,,,,,,,,,,,,,,,,,,0|i0002f:,,,,,,,,,,To Do,4/8/2026 5:01
+Responsive UI --> Content aligned to top leaving excessive empty space on screen,MA-4,10171,Bug,To Do,MA,MohammedAyman_AgileWay,software,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,Low,,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,4/7/2026 20:31,4/7/2026 20:46,,,,0,"*Step to reproduce:*
+
+1- Open the application on a mobile device or resize the browser to a responsive view
+2- Navigate through different screens (e.g., flight selection, passenger details, payment)
+3- Observe the layout and content positioning
+
+*Expected Result:*
+
+The system should display content properly distributed across the screen, utilizing available space and ensuring readability and usability
+
+*Actual Result:*
+
+Most of the screen remains empty (~80%), while all content is compressed at the top, making it difficult to read and interact with the application",,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,,,,,,,,,,07/Apr/26 8:31 PM;d891ed61-cf0d-4b09-a5f7-b72b504bea9e;image-20260407-183140.png;https://engmayman96.atlassian.net/rest/api/3/attachment/content/10039,,,,,,,,,,0|i00027:,,,,,,,,,,To Do,4/7/2026 20:31
+Passenger Details --> Last name field accepts numeric values instead of letters only,MA-3,10170,Bug,To Do,MA,MohammedAyman_AgileWay,software,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,Medium,,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,4/7/2026 19:56,4/7/2026 19:56,,,,0,"*Step to reproduce:*
+
+1- Go to passengers detail after selecting a flight with a valid details
+
+2- Enter a numeric value in the last name field
+
+3- Fill the first name with a valid name
+
+4- click next
+
+*Expected Result:*
+
+The system should present an error message and prevent proceeding when last name contains numeric values
+
+*Actual Result:*
+
+The system accepted numeric values in the last name field and proceeding without leaving an error message",,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,,,,,,,,,,07/Apr/26 7:51 PM;d891ed61-cf0d-4b09-a5f7-b72b504bea9e;image-20260407-175120.png;https://engmayman96.atlassian.net/rest/api/3/attachment/content/10037,,,,,,,,,,0|i0001z:,,,,,,,,,,To Do,4/7/2026 19:56
+No error messages appear when leaving 'From' or 'To' fields empty,MA-2,10169,Bug,To Do,MA,MohammedAyman_AgileWay,software,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,High,,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,4/7/2026 19:42,4/7/2026 20:46,,,,0,"*Step to reproduce:*
+
+1- Open Book flight page
+
+2- Leave From and To fields empty
+
+3- Fill other fields with valid data
+
+4- Click continue
+
+*Expected Result:*
+
+The booking shouldn’t complete and an error message should appear
+
+*Actual Result:*
+
+The Booking is proceeded and no error message appeared",,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,,,,,,,,,,07/Apr/26 7:42 PM;d891ed61-cf0d-4b09-a5f7-b72b504bea9e;image-20260407-174209.png;https://engmayman96.atlassian.net/rest/api/3/attachment/content/10035,,,,,,,,,,0|i0001r:,,,,,,,,,,To Do,4/7/2026 19:42
+Booking -> User can't return back to Booking page,MA-1,10136,Bug,To Do,MA,MohammedAyman_AgileWay,software,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,Highest,,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,4/7/2026 18:25,4/7/2026 20:46,4/7/2026 20:45,,,0,"h3. Impact
+
+Users are unable to return to the Booking page after completing a flight booking. This prevents them from booking additional flights.
+
+h3. Expected behaviour
+
+Users should be able to return to the Booking page to book a new flight after completing a previous booking.
+
+h3. Actual behaviour
+
+Users get stuck on the flight information page and cannot go back to book a new flight.
+
+h3. Steps to reproduce
+
+* Login as a valid user
+* Book a flight with valid data
+* Pay for the flight
+
+h3. Environment
+
+N/A
+
+h3. Workarounds
+
+N/A
+
+h3. Other information
+
+N/A",,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,,,,,,,,,,,07/Apr/26 6:25 PM;d891ed61-cf0d-4b09-a5f7-b72b504bea9e;image-20260407-162501.png;https://engmayman96.atlassian.net/rest/api/3/attachment/content/10001,,,,,,,,,,0|i0001j:,,,,,,,,,,To Do,4/7/2026 18:25

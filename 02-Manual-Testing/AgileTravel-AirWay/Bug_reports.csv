@@ -1,0 +1,11 @@
+Issue Type,Issue key,Issue id,Summary,Assignee,Assignee Id,Reporter,Reporter Id,Priority,Status,Resolution,Created,Updated,Due date
+Bug,MA-10,10209,Payment details --> Exceeding card numbers limits without validation,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Medium,To Do,,4/8/2026 5:31,4/8/2026 5:31,
+Bug,MA-9,10208,Payment details --> Adding special characters to card holder name without validation,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Low,To Do,,4/8/2026 5:26,4/8/2026 5:26,
+Bug,MA-8,10207,Flight Booking --> Return date is earlier than departure date without validation,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Medium,To Do,,4/8/2026 5:21,4/8/2026 5:21,
+Bug,MA-7,10206,Flight Booking --> Same origin and destination allowed without validation,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Highest,To Do,,4/8/2026 5:16,4/8/2026 5:16,
+Bug,MA-6,10205,Flight Booking --> Past departure date accepted without validation,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Highest,To Do,,4/8/2026 5:11,4/8/2026 5:13,
+Bug,MA-5,10204,Flight Selection --> Multiple flight selection allowed without validation,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,High,To Do,,4/8/2026 5:01,4/8/2026 5:01,
+Bug,MA-4,10171,Responsive UI --> Content aligned to top leaving excessive empty space on screen,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Low,To Do,,4/7/2026 20:31,4/7/2026 20:46,
+Bug,MA-3,10170,Passenger Details --> Last name field accepts numeric values instead of letters only,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Medium,To Do,,4/7/2026 19:56,4/7/2026 19:56,
+Bug,MA-2,10169,No error messages appear when leaving 'From' or 'To' fields empty,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,High,To Do,,4/7/2026 19:42,4/7/2026 20:46,
+Bug,MA-1,10136,Booking -> User can't return back to Booking page,,,Mohammed Ayman Aly,712020:811f0efe-d63f-4756-8d04-1fcc4dfaa698,Highest,To Do,,4/7/2026 18:25,4/7/2026 20:46,

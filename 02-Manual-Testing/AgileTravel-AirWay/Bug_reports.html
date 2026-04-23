@@ -1,0 +1,3002 @@
+<html
+        xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<title>Jira</title>
+<style type="text/css">
+table {
+    mso-displayed-decimal-separator:"\.";
+    mso-displayed-thousand-separator:"\,";
+}
+body
+{
+    margin: 0px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color:black;
+}
+
+</style>
+<META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+<!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+<!--
+Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+since Excel does not use or save the css files it is hardcoded here.
+-->
+<style>
+@page
+{
+mso-page-orientation:landscape;
+margin:.25in .25in .5in .25in;
+mso-header-margin:.5in;
+mso-footer-margin:.25in;
+mso-footer-data:"&R&P of &N";
+mso-horizontal-page-align:center;
+mso-vertical-page-align:center;
+}
+
+td.issuekey,
+td.issuetype,
+td.status {
+    mso-style-parent: "";
+    mso-number-format: \@;
+    text-align: left;
+}
+br
+{
+    mso-data-placement:same-cell;
+}
+
+td
+{
+    vertical-align: top;
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+<x:ExcelWorksheets>
+<x:ExcelWorksheet>
+<x:Name>general_report</x:Name>
+<x:WorksheetOptions>
+<x:Print>
+<x:ValidPrinterInfo/>
+</x:Print>
+</x:WorksheetOptions>
+</x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+<body>
+
+<table border="1">
+    <tr bgcolor="#205081" height="30">
+        <td colspan="55">
+            <img src="https://engmayman96.atlassian.net/images/icon-jira-family-logo.png" width="57" height="30" border="0" alt="Jira">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="55">
+            <a href="https://engmayman96.atlassian.net/issues/?jql=ORDER+BY+created+DESC">Jira</a>
+        </td>
+    </tr>
+    <tr>
+                <td colspan="55">
+            Displaying <strong>29</strong> issues at <strong>23/Apr/26 5:08 PM</strong>.
+        </td>
+    </tr>
+</table>
+
+
+
+
+                                        <table id="issuetable" class="aui " border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th class="colHeaderLink headerrow-statuscategorychangedate" data-id="statuscategorychangedate">
+                                                        Status Category Changed
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuetype" data-id="issuetype">
+                                                        Issue Type
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timespent" data-id="timespent">
+                                                        Time Spent
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10073" data-id="customfield_10073">
+                                                        Expected Result
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10074" data-id="customfield_10074">
+                                                        Actual Result
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10075" data-id="customfield_10075">
+                                                        Steps to Reproduce
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-project" data-id="project">
+                                                        Project
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10076" data-id="customfield_10076">
+                                                        Impact
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-fixVersions" data-id="fixVersions">
+                                                        Fix versions
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10077" data-id="customfield_10077">
+                                                        Actual Result
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimespent" data-id="aggregatetimespent">
+                                                        Σ Time Spent
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-statusCategory" data-id="statusCategory">
+                                                        Status Category
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10078" data-id="customfield_10078">
+                                                        Expected Result
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-parent" data-id="parent">
+                                                        Parent
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolution" data-id="resolution">
+                                                        Resolution
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10079" data-id="customfield_10079">
+                                                        Steps to reproduce
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolutiondate" data-id="resolutiondate">
+                                                        Resolved
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-workratio" data-id="workratio">
+                                                        Work Ratio
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-watches" data-id="watches">
+                                                        Watchers
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-lastViewed" data-id="lastViewed">
+                                                        Last Viewed
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-thumbnail" data-id="thumbnail">
+                                                        Images
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-created" data-id="created">
+                                                        Created
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10020" data-id="customfield_10020">
+                                                        Sprint
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10021" data-id="customfield_10021">
+                                                        Flagged
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-priority" data-id="priority">
+                                                        Priority
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-labels" data-id="labels">
+                                                        Labels
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10016" data-id="customfield_10016">
+                                                        Story point estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10017" data-id="customfield_10017">
+                                                        Issue color
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10019" data-id="customfield_10019">
+                                                        Rank
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeestimate" data-id="timeestimate">
+                                                        Remaining Estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeoriginalestimate" data-id="aggregatetimeoriginalestimate">
+                                                        Σ Original Estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-versions" data-id="versions">
+                                                        Affects versions
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuelinks" data-id="issuelinks">
+                                                        Linked Issues
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-assignee" data-id="assignee">
+                                                        Assignee
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-updated" data-id="updated">
+                                                        Updated
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-status" data-id="status">
+                                                        Status
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-components" data-id="components">
+                                                        Components
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                                                        Key
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeoriginalestimate" data-id="timeoriginalestimate">
+                                                        Original estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-description" data-id="description">
+                                                        Description
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10015" data-id="customfield_10015">
+                                                        Start date
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-security" data-id="security">
+                                                        Security Level
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeestimate" data-id="aggregatetimeestimate">
+                                                        Σ Remaining Estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-summary" data-id="summary">
+                                                        Summary
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-creator" data-id="creator">
+                                                        Creator
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-subtasks" data-id="subtasks">
+                                                        Sub-tasks
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-reporter" data-id="reporter">
+                                                        Reporter
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregateprogress" data-id="aggregateprogress">
+                                                        Σ Progress
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10000" data-id="customfield_10000">
+                                                        Development
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10001" data-id="customfield_10001">
+                                                        Team
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10004" data-id="customfield_10004">
+                                                        Impact
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-environment" data-id="environment">
+                                                        Environment
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-duedate" data-id="duedate">
+                                                        Due date
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-progress" data-id="progress">
+                                                        Progress
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-votes" data-id="votes">
+                                                        Votes
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow10295" rel="10295" data-issuekey="RID-18" class="issuerow">
+                                            <td class="statuscategorychangedate"> 14/Apr/26 5:09 PM </td>
+                                            <td class="issuetype">    Subtask
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    RideShare
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Done</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent">            As a user, I want to view the onboarding screens when opening the app for the first time
+    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> 14/Apr/26 5:09 PM </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 14/Apr/26 5:06 PM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 14/Apr/26 5:05 PM </td>
+                                            <td class="customfield_10020">RID Sprint 1</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Low
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0007j:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 14/Apr/26 5:09 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="RID-18" href="https://engmayman96.atlassian.net/browse/RID-18">RID-18</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">RID-1</span>
+                Run Test cases for onboarding
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10293" rel="10293" data-issuekey="RID-17" class="issuerow">
+                                            <td class="statuscategorychangedate"> 14/Apr/26 5:09 PM </td>
+                                            <td class="issuetype">    Subtask
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    RideShare
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Done</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent">            As a user, I want to view the onboarding screens when opening the app for the first time
+    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> 14/Apr/26 5:09 PM </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 14/Apr/26 5:06 PM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 14/Apr/26 5:05 PM </td>
+                                            <td class="customfield_10020">RID Sprint 1</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0007b:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 14/Apr/26 5:09 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="RID-17" href="https://engmayman96.atlassian.net/browse/RID-17">RID-17</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">RID-1</span>
+                Finalize Figma Design
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10291" rel="10291" data-issuekey="RID-16" class="issuerow">
+                                            <td class="statuscategorychangedate"> 14/Apr/26 5:09 PM </td>
+                                            <td class="issuetype">    Subtask
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    RideShare
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Done</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent">            As a user, I want to view the onboarding screens when opening the app for the first time
+    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> 14/Apr/26 5:09 PM </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 14/Apr/26 5:06 PM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 14/Apr/26 5:04 PM </td>
+                                            <td class="customfield_10020">RID Sprint 1</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           High
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i00073:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 14/Apr/26 5:09 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="RID-16" href="https://engmayman96.atlassian.net/browse/RID-16">RID-16</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">RID-1</span>
+                Add texts to Onboarding screen
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10257" rel="10257" data-issuekey="RID-15" class="issuerow">
+                                            <td class="statuscategorychangedate"> 14/Apr/26 3:13 PM </td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    RideShare
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 14/Apr/26 3:13 PM </td>
+                                            <td class="customfield_10020">RID Sprint 1</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016">    5
+</td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i00064:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 14/Apr/26 4:58 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="RID-15" href="https://engmayman96.atlassian.net/browse/RID-15">RID-15</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                As a user, I want to be able to enable location on my phone, so that I can order a ride easily
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10256" rel="10256" data-issuekey="RID-14" class="issuerow">
+                                            <td class="statuscategorychangedate"> 14/Apr/26 5:11 PM </td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    RideShare
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077">      There is an unnecessary skip button on the last screen 
+  </td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078">      There is no skip button on last screen
+  </td>
+                                            <td class="parent">            New user Actions
+    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079">      # Open the Application<br/>
+# Go through the onboarding until you reach the last screen
+  </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 14/Apr/26 2:27 PM </td>
+                                            <td class="thumbnail">            <a aria-label="Select to download the image for RID-14" href="https://engmayman96.atlassian.net/secure/attachment/10114/image-20260414-121424.png">
+            image-20260414-121424.png
+        </a>
+    </td>
+                                            <td class="created"> 14/Apr/26 2:18 PM </td>
+                                            <td class="customfield_10020">RID Sprint 1</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Low
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016">    1
+</td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i00061:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks">                                        RID-1                        </td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 14/Apr/26 5:11 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="RID-14" href="https://engmayman96.atlassian.net/browse/RID-14">RID-14</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                Onboarding -&gt; Skip button shouldn&#39;t appear on the last screen
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004">    Minor / Localized
+</td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10254" rel="10254" data-issuekey="RID-13" class="issuerow">
+                                            <td class="statuscategorychangedate"> 14/Apr/26 2:02 PM </td>
+                                            <td class="issuetype">    Epic
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    RideShare
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 14/Apr/26 2:02 PM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017">      grey
+  </td>
+                                            <td class="customfield_10019">      0|i0005z:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 14/Apr/26 2:02 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="RID-13" href="https://engmayman96.atlassian.net/browse/RID-13">RID-13</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                New user Actions
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10253" rel="10253" data-issuekey="RID-12" class="issuerow">
+                                            <td class="statuscategorychangedate"> 14/Apr/26 1:56 PM </td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    RideShare
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 14/Apr/26 1:56 PM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0005r:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 14/Apr/26 1:56 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="RID-12" href="https://engmayman96.atlassian.net/browse/RID-12">RID-12</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                As a user, I want to choose the ride type [car, taxi, bike,..]
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10252" rel="10252" data-issuekey="RID-11" class="issuerow">
+                                            <td class="statuscategorychangedate"> 14/Apr/26 1:56 PM </td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    RideShare
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 14/Apr/26 1:56 PM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0005j:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 14/Apr/26 1:56 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="RID-11" href="https://engmayman96.atlassian.net/browse/RID-11">RID-11</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                As a user, I want to add rides from location to location
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10251" rel="10251" data-issuekey="RID-10" class="issuerow">
+                                            <td class="statuscategorychangedate"> 14/Apr/26 1:55 PM </td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    RideShare
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 14/Apr/26 1:55 PM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0005b:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 14/Apr/26 1:55 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="RID-10" href="https://engmayman96.atlassian.net/browse/RID-10">RID-10</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                As a user, I want to show app notification on a screen
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10250" rel="10250" data-issuekey="RID-9" class="issuerow">
+                                            <td class="statuscategorychangedate"> 14/Apr/26 1:55 PM </td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    RideShare
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 14/Apr/26 1:55 PM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i00053:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 14/Apr/26 1:55 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="RID-9" href="https://engmayman96.atlassian.net/browse/RID-9">RID-9</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                As a user, I want to view a screen to choose login or sign up from it
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10249" rel="10249" data-issuekey="RID-8" class="issuerow">
+                                            <td class="statuscategorychangedate"> 14/Apr/26 1:54 PM </td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    RideShare
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent">            New user Actions
+    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 14/Apr/26 1:54 PM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0004v:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 14/Apr/26 2:03 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="RID-8" href="https://engmayman96.atlassian.net/browse/RID-8">RID-8</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                As a user, I want to receive phone verification OTP from 5 characters on Register
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10248" rel="10248" data-issuekey="RID-7" class="issuerow">
+                                            <td class="statuscategorychangedate"> 14/Apr/26 1:53 PM </td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    RideShare
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent">            New user Actions
+    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 14/Apr/26 1:53 PM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 14/Apr/26 1:53 PM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016">    2
+</td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i00047:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 14/Apr/26 4:59 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="RID-7" href="https://engmayman96.atlassian.net/browse/RID-7">RID-7</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                As a user, I want to Register with name, email, phone and gender
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10245" rel="10245" data-issuekey="RID-4" class="issuerow">
+                                            <td class="statuscategorychangedate"> 14/Apr/26 1:51 PM </td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    RideShare
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent">            New user Actions
+    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 14/Apr/26 1:51 PM </td>
+                                            <td class="customfield_10020">RID Sprint 1</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016">    6
+</td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0006v:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 14/Apr/26 5:00 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="RID-4" href="https://engmayman96.atlassian.net/browse/RID-4">RID-4</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                As a user, I want Register with Facebook account
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10244" rel="10244" data-issuekey="RID-3" class="issuerow">
+                                            <td class="statuscategorychangedate"> 14/Apr/26 1:50 PM </td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    RideShare
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent">            New user Actions
+    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 14/Apr/26 1:50 PM </td>
+                                            <td class="customfield_10020">RID Sprint 1</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016">    2
+</td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0006n:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 14/Apr/26 4:59 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="RID-3" href="https://engmayman96.atlassian.net/browse/RID-3">RID-3</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                As a user, I want to Register with an Apple account
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10243" rel="10243" data-issuekey="RID-2" class="issuerow">
+                                            <td class="statuscategorychangedate"> 14/Apr/26 1:50 PM </td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    RideShare
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent">            New user Actions
+    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 14/Apr/26 4:34 PM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 14/Apr/26 1:50 PM </td>
+                                            <td class="customfield_10020">RID Sprint 1</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016">    2
+</td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i00065:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 14/Apr/26 4:58 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="RID-2" href="https://engmayman96.atlassian.net/browse/RID-2">RID-2</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description">            *Given* user is in sign up screen<br/>
+<br/>
+*When* user decides to sign up with Gmail<br/>
+<br/>
+*Then* the user should be redirected to Gmail login page
+    </td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                As a user, I want to Register with a Gmail account
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10242" rel="10242" data-issuekey="RID-1" class="issuerow">
+                                            <td class="statuscategorychangedate"> 14/Apr/26 5:11 PM </td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    RideShare
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-green
+            jira-issue-status-lozenge-max-width-medium">Done</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent">            New user Actions
+    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> 14/Apr/26 5:11 PM </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 14/Apr/26 5:11 PM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 14/Apr/26 1:50 PM </td>
+                                            <td class="customfield_10020">RID Sprint 1</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016">    2
+</td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i00063:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks">                                        RID-14                        </td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 14/Apr/26 5:11 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="RID-1" href="https://engmayman96.atlassian.net/browse/RID-1">RID-1</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description">            *Given* the user is using the application for the first time<br/>
+<br/>
+*When* the user opens the application<br/>
+<br/>
+*Then* he should be able to navigate through the onboarding screen<br/>
+<br/>
+<br/>
+<br/>
+*Given* that user is through the onboarding screen<br/>
+<br/>
+*When* user tabs on skip button at any screen<br/>
+<br/>
+*Then* onboarding should stop and user is redirected to sign up screen<br/>
+<br/>
+<br/>
+<br/>
+*Given* that user is logged in<br/>
+<br/>
+*When* deletes all application data and open it again<br/>
+<br/>
+*Then* he should be directed to onboarding again
+    </td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                As a user, I want to view the onboarding screens when opening the app for the first time
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks">                                        RID-16,                                                RID-17,                                                RID-18                        </td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10209" rel="10209" data-issuekey="MA-10" class="issuerow">
+                                            <td class="statuscategorychangedate"> 08/Apr/26 5:31 AM </td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    MohammedAyman_AgileWay
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail">            <a aria-label="Select to download the image for MA-10" href="https://engmayman96.atlassian.net/secure/attachment/10080/image-20260408-032826.png">
+            image-20260408-032826.png
+        </a>
+    </td>
+                                            <td class="created"> 08/Apr/26 5:31 AM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0003j:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 08/Apr/26 5:31 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MA-10" href="https://engmayman96.atlassian.net/browse/MA-10">MA-10</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description">            *Step to reproduce:*<br/>
+<br/>
+1- Go to payment screen<br/>
+2- add 24 number in the card number field (allowed is 16)<br/>
+3- Select valid travel data<br/>
+4- Click pay now<br/>
+<br/>
+*Expected Result:*<br/>
+<br/>
+The system should present an error message says card number shouldn’t exceed 16 numbers<br/>
+<br/>
+*Actual Result:*<br/>
+<br/>
+The system proceeded without showing any error message
+    </td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                Payment details --&gt; Exceeding card numbers limits without validation
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10208" rel="10208" data-issuekey="MA-9" class="issuerow">
+                                            <td class="statuscategorychangedate"> 08/Apr/26 5:26 AM </td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    MohammedAyman_AgileWay
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail">            <a aria-label="Select to download the image for MA-9" href="https://engmayman96.atlassian.net/secure/attachment/10078/image-20260408-032408.png">
+            image-20260408-032408.png
+        </a>
+    </td>
+                                            <td class="created"> 08/Apr/26 5:26 AM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Low
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0003b:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 08/Apr/26 5:26 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MA-9" href="https://engmayman96.atlassian.net/browse/MA-9">MA-9</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description">            *Step to reproduce:*<br/>
+<br/>
+1- Go to passenger details screen<br/>
+2- add special characters to last name<br/>
+4- Click next<br/>
+<br/>
+*Expected Result:*<br/>
+<br/>
+The system should present an error message and prevent proceeding <br/>
+<br/>
+*Actual Result:*<br/>
+<br/>
+The system proceed to payment page without showing any error message
+    </td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                Payment details --&gt; Adding special characters to card holder name without validation
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10207" rel="10207" data-issuekey="MA-8" class="issuerow">
+                                            <td class="statuscategorychangedate"> 08/Apr/26 5:21 AM </td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    MohammedAyman_AgileWay
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail">            <a aria-label="Select to download the image for MA-8" href="https://engmayman96.atlassian.net/secure/attachment/10076/image-20260408-031833.png">
+            image-20260408-031833.png
+        </a>
+    </td>
+                                            <td class="created"> 08/Apr/26 5:21 AM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i00033:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 08/Apr/26 5:21 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MA-8" href="https://engmayman96.atlassian.net/browse/MA-8">MA-8</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description">            *Step to reproduce:*<br/>
+<br/>
+1- Go to flight booking screen<br/>
+2- Select Return date to be earlier than departure date<br/>
+<br/>
+3- Select valid travel data <br/>
+4- Click continue<br/>
+<br/>
+*Expected Result:*<br/>
+<br/>
+The system should present an error message and prevent proceeding when Return data is earlier than departure date<br/>
+<br/>
+*Actual Result:*<br/>
+<br/>
+The system allowed booking with Return data is earlier than departure date and proceeded without showing any error message
+    </td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                Flight Booking --&gt; Return date is earlier than departure date without validation
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10206" rel="10206" data-issuekey="MA-7" class="issuerow">
+                                            <td class="statuscategorychangedate"> 08/Apr/26 5:16 AM </td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    MohammedAyman_AgileWay
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail">            <a aria-label="Select to download the image for MA-7" href="https://engmayman96.atlassian.net/secure/attachment/10074/image-20260408-031646.png">
+            image-20260408-031646.png
+        </a>
+    </td>
+                                            <td class="created"> 08/Apr/26 5:16 AM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Highest
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0002v:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 08/Apr/26 5:16 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MA-7" href="https://engmayman96.atlassian.net/browse/MA-7">MA-7</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description">            *Step to reproduce:*<br/>
+<br/>
+1- Go to flight booking screen<br/>
+2- Select the same city for both origin and destination<br/>
+3- Select valid travel date(s)<br/>
+4- Click continue<br/>
+<br/>
+*Expected Result:*<br/>
+<br/>
+The system should present an error message and prevent proceeding when origin and destination are the same<br/>
+<br/>
+*Actual Result:*<br/>
+<br/>
+The system allowed booking with the same origin and destination and proceeded without showing any error message
+    </td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                Flight Booking --&gt; Same origin and destination allowed without validation
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10205" rel="10205" data-issuekey="MA-6" class="issuerow">
+                                            <td class="statuscategorychangedate"> 08/Apr/26 5:11 AM </td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    MohammedAyman_AgileWay
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 08/Apr/26 5:13 AM </td>
+                                            <td class="thumbnail">            <a aria-label="Select to download the image for MA-6" href="https://engmayman96.atlassian.net/secure/attachment/10072/image-20260408-031343.png">
+            image-20260408-031343.png
+        </a>
+    </td>
+                                            <td class="created"> 08/Apr/26 5:11 AM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Highest
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0002n:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 08/Apr/26 5:13 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MA-6" href="https://engmayman96.atlassian.net/browse/MA-6">MA-6</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description">            *Step to reproduce:*<br/>
+<br/>
+1- Go to flight booking screen<br/>
+2- Select a departure date in the past<br/>
+3- Fill other required fields with valid data<br/>
+4- Click continue<br/>
+<br/>
+*Expected Result:*<br/>
+<br/>
+The system should present an error message and prevent proceeding when departure date is in the past<br/>
+<br/>
+*Actual Result:*<br/>
+<br/>
+The system accepted a past departure date and proceeded to the passenger details page without showing any error message
+    </td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                Flight Booking --&gt; Past departure date accepted without validation
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10204" rel="10204" data-issuekey="MA-5" class="issuerow">
+                                            <td class="statuscategorychangedate"> 08/Apr/26 5:01 AM </td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    MohammedAyman_AgileWay
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 08/Apr/26 5:01 AM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           High
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0002f:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 08/Apr/26 5:01 AM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MA-5" href="https://engmayman96.atlassian.net/browse/MA-5">MA-5</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description">            *Step to reproduce:*<br/>
+<br/>
+1- Go to flight selection screen<br/>
+<br/>
+2- Providing valid data<br/>
+3- Select more than one flight at the same time<br/>
+4- Click continue<br/>
+<br/>
+*Expected Result:*<br/>
+<br/>
+The system should present an error message and prevent proceeding when multiple flights are selected<br/>
+<br/>
+*Actual Result:*<br/>
+<br/>
+The system allowed selecting multiple flights and proceeded to the passenger details page without showing any error message
+    </td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                Flight Selection --&gt; Multiple flight selection allowed without validation
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10171" rel="10171" data-issuekey="MA-4" class="issuerow">
+                                            <td class="statuscategorychangedate"> 07/Apr/26 8:31 PM </td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    MohammedAyman_AgileWay
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail">            <a aria-label="Select to download the image for MA-4" href="https://engmayman96.atlassian.net/secure/attachment/10039/image-20260407-183140.png">
+            image-20260407-183140.png
+        </a>
+    </td>
+                                            <td class="created"> 07/Apr/26 8:31 PM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Low
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i00027:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 07/Apr/26 8:46 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MA-4" href="https://engmayman96.atlassian.net/browse/MA-4">MA-4</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description">            *Step to reproduce:*<br/>
+<br/>
+1- Open the application on a mobile device or resize the browser to a responsive view<br/>
+2- Navigate through different screens (e.g., flight selection, passenger details, payment)<br/>
+3- Observe the layout and content positioning<br/>
+<br/>
+*Expected Result:*<br/>
+<br/>
+The system should display content properly distributed across the screen, utilizing available space and ensuring readability and usability<br/>
+<br/>
+*Actual Result:*<br/>
+<br/>
+Most of the screen remains empty (~80%), while all content is compressed at the top, making it difficult to read and interact with the application
+    </td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                Responsive UI --&gt; Content aligned to top leaving excessive empty space on screen
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10170" rel="10170" data-issuekey="MA-3" class="issuerow">
+                                            <td class="statuscategorychangedate"> 07/Apr/26 7:56 PM </td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    MohammedAyman_AgileWay
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail">            <a aria-label="Select to download the image for MA-3" href="https://engmayman96.atlassian.net/secure/attachment/10037/image-20260407-175120.png">
+            image-20260407-175120.png
+        </a>
+    </td>
+                                            <td class="created"> 07/Apr/26 7:56 PM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0001z:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 07/Apr/26 7:56 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MA-3" href="https://engmayman96.atlassian.net/browse/MA-3">MA-3</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description">            *Step to reproduce:*<br/>
+<br/>
+1- Go to passengers detail after selecting a flight with a valid details<br/>
+<br/>
+2- Enter a numeric value in the last name field<br/>
+<br/>
+3- Fill the first name with a valid name<br/>
+<br/>
+4- click next<br/>
+<br/>
+*Expected Result:*<br/>
+<br/>
+The system should present an error message and prevent proceeding when last name contains numeric values<br/>
+<br/>
+*Actual Result:*<br/>
+<br/>
+The system accepted numeric values in the last name field and proceeding without leaving an error message
+    </td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                Passenger Details --&gt; Last name field accepts numeric values instead of letters only
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10169" rel="10169" data-issuekey="MA-2" class="issuerow">
+                                            <td class="statuscategorychangedate"> 07/Apr/26 7:42 PM </td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    MohammedAyman_AgileWay
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail">            <a aria-label="Select to download the image for MA-2" href="https://engmayman96.atlassian.net/secure/attachment/10035/image-20260407-174209.png">
+            image-20260407-174209.png
+        </a>
+    </td>
+                                            <td class="created"> 07/Apr/26 7:42 PM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           High
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0001r:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 07/Apr/26 8:46 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MA-2" href="https://engmayman96.atlassian.net/browse/MA-2">MA-2</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description">            *Step to reproduce:*<br/>
+<br/>
+1- Open Book flight page<br/>
+<br/>
+2- Leave From and To fields empty<br/>
+<br/>
+3- Fill other fields with valid data<br/>
+<br/>
+4- Click continue<br/>
+<br/>
+*Expected Result:*<br/>
+<br/>
+The booking shouldn’t complete and an error message should appear<br/>
+<br/>
+*Actual Result:*<br/>
+<br/>
+The Booking is proceeded and no error message appeared
+    </td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                No error messages appear when leaving &#39;From&#39; or &#39;To&#39; fields empty
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10136" rel="10136" data-issuekey="MA-1" class="issuerow">
+                                            <td class="statuscategorychangedate"> 07/Apr/26 6:25 PM </td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    MohammedAyman_AgileWay
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 07/Apr/26 8:45 PM </td>
+                                            <td class="thumbnail">            <a aria-label="Select to download the image for MA-1" href="https://engmayman96.atlassian.net/secure/attachment/10001/image-20260407-162501.png">
+            image-20260407-162501.png
+        </a>
+    </td>
+                                            <td class="created"> 07/Apr/26 6:25 PM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Highest
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0001j:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="updated"> 07/Apr/26 8:46 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MA-1" href="https://engmayman96.atlassian.net/browse/MA-1">MA-1</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description">            h3. Impact<br/>
+<br/>
+Users are unable to return to the Booking page after completing a flight booking. This prevents them from booking additional flights.<br/>
+<br/>
+h3. Expected behaviour<br/>
+<br/>
+Users should be able to return to the Booking page to book a new flight after completing a previous booking.<br/>
+<br/>
+h3. Actual behaviour<br/>
+<br/>
+Users get stuck on the flight information page and cannot go back to book a new flight.<br/>
+<br/>
+h3. Steps to reproduce<br/>
+<br/>
+* Login as a valid user<br/>
+* Book a flight with valid data<br/>
+* Pay for the flight<br/>
+<br/>
+h3. Environment<br/>
+<br/>
+N/A<br/>
+<br/>
+h3. Workarounds<br/>
+<br/>
+N/A<br/>
+<br/>
+h3. Other information<br/>
+<br/>
+N/A
+    </td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                Booking -&gt; User can&#39;t return back to Booking page
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10103" rel="10103" data-issuekey="TBP1-3" class="issuerow">
+                                            <td class="statuscategorychangedate"> 02/Apr/26 11:00 PM </td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    Testing Bootcamp Project 1
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-yellow
+            jira-issue-status-lozenge-max-width-medium">In Progress</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 02/Apr/26 10:56 PM </td>
+                                            <td class="customfield_10020">TBP1 Sprint 1</td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0001b:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">            Mohammed Ayman Aly
+    </td>
+                                            <td class="updated"> 02/Apr/26 11:00 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;In Progress&lt;/span&gt;">In Progress</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="TBP1-3" href="https://engmayman96.atlassian.net/browse/TBP1-3">TBP1-3</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description">            *Expected Result:*<br/>
+<br/>
+<br/>
+<br/>
+*Actual Result:*<br/>
+<br/>
+<br/>
+<br/>
+*Steps to reproduce:*<br/>
+<br/>
+1-<br/>
+<br/>
+2-<br/>
+<br/>
+3-
+    </td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                Login --&gt; Forgot password button is not working
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10070" rel="10070" data-issuekey="TBP1-2" class="issuerow">
+                                            <td class="statuscategorychangedate"> 01/Apr/26 5:41 PM </td>
+                                            <td class="issuetype">    Subtask
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    Testing Bootcamp Project 1
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent">            As a user I want to add items to the cart so that I can purchase them
+    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 01/Apr/26 5:41 PM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 01/Apr/26 5:41 PM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i00013:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">            Mohammed Ayman Aly
+    </td>
+                                            <td class="updated"> 01/Apr/26 5:41 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="TBP1-2" href="https://engmayman96.atlassian.net/browse/TBP1-2">TBP1-2</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">TBP1-1</span>
+                TC-01: Validate with a valid login
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+
+
+                <tr id="issuerow10036" rel="10036" data-issuekey="TBP1-1" class="issuerow">
+                                            <td class="statuscategorychangedate"> 29/Mar/26 10:09 PM </td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="timespent"></td>
+                                            <td class="customfield_10073"></td>
+                                            <td class="customfield_10074"></td>
+                                            <td class="customfield_10075"></td>
+                                            <td class="project">    Testing Bootcamp Project 1
+</td>
+                                            <td class="customfield_10076"></td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="customfield_10077"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="customfield_10078"></td>
+                                            <td class="parent"></td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="customfield_10079"></td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="watches">1</td>
+                                            <td class="lastViewed"> 04/Apr/26 5:14 PM </td>
+                                            <td class="thumbnail"></td>
+                                            <td class="created"> 29/Mar/26 10:09 PM </td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="labels"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10019">      0|i0000v:
+  </td>
+                                            <td class="timeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="issuelinks"></td>
+                                            <td class="assignee">            Mohammed Ayman Aly
+    </td>
+                                            <td class="updated"> 29/Mar/26 10:09 PM </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="TBP1-1" href="https://engmayman96.atlassian.net/browse/TBP1-1">TBP1-1</a>
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="description">            Given user oppened cart page<br/>
+When user adds items to cart<br/>
+Then number of items in cart changes<br/>
+And Total price appears correctly
+    </td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="security"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="summary"><p>
+                As a user I want to add items to the cart so that I can purchase them
+    </p>
+</td>
+                                            <td class="creator">            Mohammed Ayman Aly
+    </td>
+                                            <td class="subtasks">                                        TBP1-2                        </td>
+                                            <td class="reporter">            Mohammed Ayman Aly
+    </td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001">    None
+</td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="environment"></td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="progress"></td>
+                                            <td class="votes">0</td>
+                    </tr>
+        </tbody>
+    </table>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#dddddd" colspan="55"><font size="1">
+        Generated at Thu Apr 23 15:08:00 UTC 2026 by Mohammed Ayman Aly using Jira 1001.0.0-SNAPSHOT#100291-rev:8af5eb3fe8ec8ff4c45c5b8497811390f76c79eb.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>
