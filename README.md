@@ -10,7 +10,7 @@ Welcome to my Software Testing Portfolio! This repository showcases my hands-on 
 QA Engineer | Cairo, Egypt  
 📧 mohmmedayman89@gmail.com | 🐙 [[GitHub]](https://github.com/MohammedAyman89)
 
-Systems Engineer with 2+ years of technical experience transitioning into Software QA. Trained in manual testing, API testing (Postman), test automation (Selenium/Python), and SQL data validation. Currently expanding skills in performance testing and CI/CD integration.
+Systems Engineer with 2+ years of technical experience transitioning into Software QA. Trained in manual testing, API testing (Postman), test automation (Selenium/Python), and SQL data validation. Proficient in AI-assisted development workflows using Claude Code (SuperClaude, Speckit, Playwright MCP, GSD). Currently expanding skills in performance testing and CI/CD integration.
 
 ---
 
@@ -75,6 +75,10 @@ Systems Engineer with 2+ years of technical experience transitioning into Softwa
 ![JMeter](https://img.shields.io/badge/Apache_JMeter-D22128?style=flat&logo=apache&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=github-actions&logoColor=white)
 
+### AI-Assisted Development
+![Claude](https://img.shields.io/badge/Claude_Code-191919?style=flat&logo=claude&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright_MCP-2EAD33?style=flat&logo=playwright&logoColor=white)
+
 ---
 
 ## Currently Learning
@@ -97,6 +101,7 @@ Systems Engineer with 2+ years of technical experience transitioning into Softwa
 | **Manual Testing** | JIRA, Zephyr Scale, Trello, Excel | Intermediate |
 | **Database Testing** | MySQL, SQL (CTEs, window functions) | Intermediate |
 | **Performance Testing** | Apache JMeter | Beginner — learning |
+| **AI-Assisted QA** | Claude Code (SuperClaude, Speckit, Playwright MCP, GSD) | Intermediate |
 
 ---
 
