@@ -1,98 +1,93 @@
-# Trello API Testing Project
+# Software Testing Portfolio
 
-Comprehensive API testing of Trello REST API using Postman. Covers full CRUD operations with positive and negative test scenarios.
-
----
-
-## Project Info
-
-| Item | Details |
-|------|---------|
-| **API** | Trello REST API v1 |
-| **Tool** | Postman |
-| **Total Requests** | 23 |
-| **Total Assertions** | 40+ |
-| **Test Types** | Positive, Negative, Boundary |
+Welcome to my Software Testing Portfolio! This repository showcases my hands-on experience in API testing, manual testing, and test automation. I am actively transitioning into a QA Engineer role and continuously adding new projects.
 
 ---
 
-## Test Coverage
+## About Me
 
-### Positive Tests (Happy Path)
+**Mohammed Ayman Elbasyoni**  
+QA Engineer | Cairo, Egypt  
+📧 mohmmedayman89@gmail.com | 🐙 [[GitHub]](https://github.com/MohammedAyman89)
 
-| Feature | Requests | Methods |
-|---------|----------|---------|
-| Board Management | Create, Get, Update, Delete | POST, GET, PUT, DELETE |
-| List Management | Create, Get, Update, Archive | POST, GET, PUT |
-| Card Management | Create, Get, Update, Delete | POST, GET, PUT, DELETE |
-
-### Negative Tests (Error Handling)
-
-| Scenario | Expected Status | Test Case |
-|----------|-----------------|-----------|
-| Missing authentication token | 401 Unauthorized | Create board without token |
-| Invalid board ID format | 400 Bad Request | Get board with malformed ID |
-| Missing required field | 400 Bad Request | Create card without `idList` |
-| Invalid token | 401 Unauthorized | Update board with fake token |
-| Deleted resource | 404 Not Found | Get deleted card |
+Systems Engineer with 2+ years of technical experience transitioning into Software QA. Trained in manual testing, API testing (Postman), test automation (Selenium/Python), and SQL data validation. Currently expanding skills in performance testing and CI/CD integration.
 
 ---
 
-## How to Run
+## Portfolio Structure
 
-### Prerequisites
-- Postman installed
-- Trello account (free)
-- Trello API Key and Token ([Get yours here](https://trello.com/power-ups/admin))
-
-### Setup
-
-1. **Import Collection**
-   - File → Import → Select `Trello_APIs.postman_collection.json`
-
-2. **Import Environment**
-   - File → Import → Select `Trello_Environment_Template.json`
-
-3. **Set Environment Variables**
-   | Variable | Value |
-   |----------|-------|
-   | `API key` | Your Trello API Key |
-   | `Token` | Your Trello API Token |
-
-4. **Run Collection**
-   - Select collection → Click **Run** (Collection Runner)
-   - Or use Newman: `newman run Trello_APIs.postman_collection.json -e Trello_Environment.json`
+| # | Category | Projects | Tools |
+|---|----------|----------|-------|
+| 01 | **API Testing** | Trello API, E-commerce API | Postman, REST APIs, Newman |
+| 02 | **Manual Testing** | Test cases, Bug reports | Excel, JIRA, Zephyr Scale, Trello |
+| 03 | **Database Testing** | Data validation, ETL testing | MySQL, SQL |
+| 04 | **Test Automation** | *(Projects in progress)* | Selenium, Python |
+| 05 | **Performance Testing** | *(Learning — JMeter)* | Apache JMeter |
+| 06 | **Certifications** | *(In Progress)* | ISTQB Foundation Level |
 
 ---
 
-## Collection Runner Results
+## Featured Project: Trello API Testing
 
-![Collection Runner Passed](./screenshots/collection-runner-passed.png)
+**Collection:** 23 requests | 40+ assertions | 5 negative test scenarios
 
----
+**Coverage:**
+- ✅ Full CRUD lifecycle (Boards, Lists, Cards)
+- ✅ Dynamic test data generation (pre-request scripts)
+- ✅ Chained variables for data dependency
+- ✅ Positive & negative testing (401, 400, 404 error handling)
+- ✅ Performance assertions (response time &lt; 1000ms)
 
-## Key Techniques Demonstrated
-
-- **Chained Variables**: `boardId` → `ListId` → `CardId` passed between requests
-- **Dynamic Data**: Pre-request scripts generate random names to avoid conflicts
-- **Data Integrity**: Response fields validated against request data
-- **Error Handling**: 400/401/404 responses validated with meaningful messages
-- **Performance**: Response time assertions on all requests
-
----
-
-## Files
-
-| File | Description |
-|------|-------------|
-| `Trello_APIs.postman_collection.json` | Main Postman collection |
-| `Trello_Environment_Template.json` | Environment variables template (no secrets) |
+**[View Project →](./01-API-Testing/Trello-API-Testing/)**
 
 ---
 
-## Future Improvements
+## Tools & Technologies
 
-- [ ] Add Newman CLI execution with HTML reports
-- [ ] Integrate with GitHub Actions for CI/CD
-- [ ] Add JSON schema validation tests
-- [ ] Expand negative tests with boundary value analysis
+### Testing Tools
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat&logo=postman&logoColor=white)
+![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=flat&logo=selenium&logoColor=white)
+![JIRA](https://img.shields.io/badge/JIRA-0052CC?style=flat&logo=jira&logoColor=white)
+![Zephyr Scale](https://img.shields.io/badge/Zephyr_Scale-00A3E0?style=flat&logoColor=white)
+![Trello](https://img.shields.io/badge/Trello-0052CC?style=flat&logo=trello&logoColor=white)
+
+### Technical Skills
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-217346?style=flat&logo=microsoft-excel&logoColor=white)
+
+### Learning
+![JMeter](https://img.shields.io/badge/Apache_JMeter-D22128?style=flat&logo=apache&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=github-actions&logoColor=white)
+
+---
+
+## Currently Learning
+
+| Skill | Status | Target |
+|-------|--------|--------|
+| Selenium WebDriver — Advanced Patterns | 🟡 In Progress | Page Object Model, waits, reporting |
+| Apache JMeter — Performance Testing | 🟡 In Progress | Load & stress testing |
+| ISTQB Foundation Level Certification | 🟡 In Progress | Q2 2026 |
+| CI/CD Integration (GitHub Actions) | ⚪ Planned | Automated test execution |
+
+---
+
+## Skills Overview
+
+| Category | Tools | Proficiency |
+|----------|-------|-------------|
+| **API Testing** | Postman, REST APIs, Newman | Intermediate |
+| **Test Automation** | Selenium WebDriver, Python | Familiar — building projects |
+| **Manual Testing** | JIRA, Zephyr Scale, Trello, Excel | Intermediate |
+| **Database Testing** | MySQL, SQL (CTEs, window functions) | Intermediate |
+| **Performance Testing** | Apache JMeter | Beginner — learning |
+
+---
+
+## Contact
+
+Open to QA Engineer opportunities in Cairo or remote. Feel free to reach out!
+
+📧 mohmmedayman89@gmail.com
