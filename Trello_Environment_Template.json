@@ -1,0 +1,59 @@
+{
+  "name": "Trello API Testing",
+  "values": [
+    {
+      "key": "API key",
+      "value": "YOUR_API_KEY_HERE",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "Token",
+      "value": "YOUR_TOKEN_HERE",
+      "type": "secret",
+      "enabled": true
+    },
+    {
+      "key": "base_url",
+      "value": "https://api.trello.com/1",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "myVar",
+      "value": "",
+      "type": "any",
+      "enabled": true
+    },
+    {
+      "key": "boardId",
+      "value": "",
+      "type": "any",
+      "enabled": true
+    },
+    {
+      "key": "MyListName",
+      "value": "",
+      "type": "any",
+      "enabled": true
+    },
+    {
+      "key": "ListId",
+      "value": "",
+      "type": "any",
+      "enabled": true
+    },
+    {
+      "key": "MyCardName",
+      "value": "",
+      "type": "any",
+      "enabled": true
+    },
+    {
+      "key": "CardId",
+      "value": "",
+      "type": "any",
+      "enabled": true
+    }
+  ]
+}
