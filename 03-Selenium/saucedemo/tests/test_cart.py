@@ -1,4 +1,3 @@
-import pytest
 from pages.Inventory_Page import InventoryPage
 from pages.cart_page import CartPage
 
