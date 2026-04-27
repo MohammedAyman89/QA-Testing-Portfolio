@@ -22,8 +22,9 @@ Systems Engineer with 2+ years of technical experience transitioning into Softwa
 | 02 | **Manual Testing** | Test cases, Bug reports | Excel, JIRA, Zephyr Scale, Trello |
 | 03 | **Database Testing** | Data validation, ETL testing | MySQL, SQL |
 | 04 | **Test Automation** | Saucedemo E-commerce | Selenium, Python, Pytest |
-| 05 | **Performance Testing** | *(Learning — JMeter)* | Apache JMeter |
-| 06 | **Certifications** | *(In Progress)* | ISTQB Foundation Level |
+| 05 | **API Automation** | RESTful-Booker API | Python, Requests, Pytest |
+| 06 | **Performance Testing** | *(Learning — JMeter)* | Apache JMeter |
+| 07 | **Certifications** | *(In Progress)* | ISTQB Foundation Level |
 
 ---
 
@@ -71,6 +72,21 @@ Systems Engineer with 2+ years of technical experience transitioning into Softwa
 
 ---
 
+## Featured Project: RESTful-Booker — API Automation
+
+**Framework:** Python Requests + Pytest | 22 test cases | 3 bugs found
+
+**Coverage:**
+- ✅ Full CRUD — GET, POST, PUT, PATCH, DELETE with auth token management
+- ✅ Health check, booking creation, field validation, date verification
+- ✅ Negative testing — missing fields, invalid IDs, unauthorized access, wrong credentials
+- ✅ Bug detection — incorrect status codes (500 vs 400, 200 vs 401, 405 vs 404)
+- ✅ Parametrized tests, failure logging, HTML reports
+
+**[View Project →](./04-API-Automation/restful-booker/)**
+
+---
+
 ## Tools & Technologies
 
 ### Testing Tools
@@ -113,6 +129,7 @@ Systems Engineer with 2+ years of technical experience transitioning into Softwa
 | Category | Tools | Proficiency |
 |----------|-------|-------------|
 | **API Testing** | Postman, REST APIs, Newman | Intermediate |
+| **API Automation** | Python Requests, Pytest | Intermediate |
 | **Test Automation** | Selenium WebDriver, Python, Pytest | Intermediate |
 | **Manual Testing** | JIRA, Zephyr Scale, Trello, Excel | Intermediate |
 | **Database Testing** | MySQL, SQL (CTEs, window functions) | Intermediate |
