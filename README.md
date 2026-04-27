@@ -21,7 +21,7 @@ Systems Engineer with 2+ years of technical experience transitioning into Softwa
 | 01 | **API Testing** | Trello API, E-commerce API | Postman, REST APIs, Newman |
 | 02 | **Manual Testing** | Test cases, Bug reports | Excel, JIRA, Zephyr Scale, Trello |
 | 03 | **Database Testing** | Data validation, ETL testing | MySQL, SQL |
-| 04 | **Test Automation** | *(Projects in progress)* | Selenium, Python |
+| 04 | **Test Automation** | Saucedemo E-commerce | Selenium, Python, Pytest |
 | 05 | **Performance Testing** | *(Learning — JMeter)* | Apache JMeter |
 | 06 | **Certifications** | *(In Progress)* | ISTQB Foundation Level |
 
@@ -56,6 +56,21 @@ Systems Engineer with 2+ years of technical experience transitioning into Softwa
 
 ---
 
+## Featured Project: Saucedemo — Selenium Test Automation
+
+**Framework:** Page Object Model | 18 test cases | Python + Pytest
+
+**Coverage:**
+- ✅ Login — 8 scenarios (valid, wrong credentials, empty fields, locked user, SQL injection, trailing spaces)
+- ✅ Inventory — 3 scenarios (product listing, add to cart, open cart)
+- ✅ Cart — 3 scenarios (verify items, remove item, proceed to checkout)
+- ✅ Checkout — 4 scenarios (full flow, empty field validation)
+- ✅ Explicit waits, parametrized tests, screenshot on failure, HTML reports
+
+**[View Project →](./03-Selenium/saucedemo/)**
+
+---
+
 ## Tools & Technologies
 
 ### Testing Tools
@@ -85,7 +100,8 @@ Systems Engineer with 2+ years of technical experience transitioning into Softwa
 
 | Skill | Status | Target |
 |-------|--------|--------|
-| Selenium WebDriver — Advanced Patterns | 🟡 In Progress | Page Object Model, waits, reporting |
+| Selenium WebDriver — Advanced Patterns | ✅ Completed | Page Object Model, waits, reporting |
+| Selenium WebDriver — Real-world Automation | 🟡 In Progress | Agile Travel site automation |
 | Apache JMeter — Performance Testing | 🟡 In Progress | Load & stress testing |
 | ISTQB Foundation Level Certification | 🟡 In Progress | Q2 2026 |
 | CI/CD Integration (GitHub Actions) | ⚪ Planned | Automated test execution |
@@ -97,7 +113,7 @@ Systems Engineer with 2+ years of technical experience transitioning into Softwa
 | Category | Tools | Proficiency |
 |----------|-------|-------------|
 | **API Testing** | Postman, REST APIs, Newman | Intermediate |
-| **Test Automation** | Selenium WebDriver, Python | Familiar — building projects |
+| **Test Automation** | Selenium WebDriver, Python, Pytest | Intermediate |
 | **Manual Testing** | JIRA, Zephyr Scale, Trello, Excel | Intermediate |
 | **Database Testing** | MySQL, SQL (CTEs, window functions) | Intermediate |
 | **Performance Testing** | Apache JMeter | Beginner — learning |
