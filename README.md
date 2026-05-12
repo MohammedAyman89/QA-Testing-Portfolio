@@ -1,6 +1,13 @@
 # Software Testing Portfolio
 
-Welcome to my Software Testing Portfolio! This repository showcases my hands-on experience in API testing, manual testing, and test automation. I am actively transitioning into a QA Engineer role and continuously adding new projects.
+Junior QA Engineer with hands-on experience in **Manual Testing, API Testing, and Web Automation** using Selenium and Postman.
+
+This repository showcases real testing projects including:
+- End-to-End automation with Page Object Model
+- REST API testing (functional + negative scenarios)
+- Bug reporting and test documentation
+
+**Open to freelance and full-time opportunities.**
 
 ---
 
