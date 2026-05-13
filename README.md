@@ -1,41 +1,39 @@
-# Software Testing Portfolio
+# QA & Software Testing Portfolio
 
-Junior QA Engineer with hands-on experience in **Manual Testing, API Testing, and Web Automation** using Selenium and Postman.
+**Junior QA Engineer** | Manual + API Testing | Selenium Automation
 
-This repository showcases real testing projects including:
-- End-to-End automation with Page Object Model
-- REST API testing (functional + negative scenarios)
-- Bug reporting and test documentation
-
-**Open to freelance and full-time opportunities.**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
 
 ---
 
-## About Me
-
+### About Me
 **Mohammed Ayman Elbasyoni**  
-QA Engineer | Cairo, Egypt  
-📧 mohmmedayman89@gmail.com | 🐙 [[GitHub]](https://github.com/MohammedAyman89)
+QA Engineer | Cairo, Egypt
 
-Systems Engineer with 2+ years of technical experience transitioning into Software QA. Trained in manual testing, API testing (Postman), test automation (Selenium/Python), and SQL data validation. Proficient in AI-assisted development workflows using Claude Code (SuperClaude, Speckit, Playwright MCP, GSD). Currently expanding skills in performance testing and CI/CD integration.
+Passionate QA Engineer with 2+ years of technical experience transitioning into Software Quality Assurance. Hands-on experience in **Manual Testing, API Testing (Postman)**, **Web Automation (Selenium + Python)**, and **SQL** data validation.
+
+Proficient in using AI tools to accelerate test development. Currently strengthening skills in Performance Testing and CI/CD.
+
+**Open to**: Full-time Junior QA roles | Freelance Testing projects | Remote opportunities
+
+📧 mohmmedayman89@gmail.com | [GitHub](https://github.com/MohammedAyman89)
+
+---
+### Key Achievements
+
+- ✅ Built Selenium automation framework using Page Object Model (POM)
+- ✅ Designed and executed 40+ API test assertions (Postman)
+- ✅ Found and reported 3 real bugs in RESTful-Booker API
+- ✅ Covered positive, negative, and edge cases across all projects
+- ✅ Implemented automation with reporting, screenshots, and failure handling
 
 ---
 
-## Portfolio Structure
-
-| # | Category | Projects | Tools |
-|---|----------|----------|-------|
-| 01 | **API Testing** | Trello API, E-commerce API | Postman, REST APIs, Newman |
-| 02 | **Manual Testing** | Test cases, Bug reports | Excel, JIRA, Zephyr Scale, Trello |
-| 03 | **Database Testing** | Data validation, ETL testing | MySQL, SQL |
-| 04 | **Test Automation** | Saucedemo E-commerce | Selenium, Python, Pytest |
-| 05 | **API Automation** | RESTful-Booker API | Python, Requests, Pytest |
-| 06 | **Performance Testing** | *(Learning — JMeter)* | Apache JMeter |
-| 07 | **Certifications** | *(In Progress)* | ISTQB Foundation Level |
-
----
-
-## Featured Project: Trello API Testing
+## Featured Projects
+### Trello API Testing
 
 **Collection:** 23 requests | 40+ assertions | 5 negative test scenarios
 
@@ -50,7 +48,7 @@ Systems Engineer with 2+ years of technical experience transitioning into Softwa
 
 ---
 
-## Featured Project: Agile Travel — Manual Testing
+### Agile Travel — Manual Testing
 
 **Test Cycles:** 1 | Valid & Invalid Scenarios | Full booking flow
 
@@ -64,7 +62,7 @@ Systems Engineer with 2+ years of technical experience transitioning into Softwa
 
 ---
 
-## Featured Project: Saucedemo — Selenium Test Automation
+### Saucedemo — Selenium Test Automation
 
 **Framework:** Page Object Model | 18 test cases | Python + Pytest
 
@@ -79,7 +77,7 @@ Systems Engineer with 2+ years of technical experience transitioning into Softwa
 
 ---
 
-## Featured Project: RESTful-Booker — API Automation
+### RESTful-Booker — API Automation
 
 **Framework:** Python Requests + Pytest | 22 test cases | 3 bugs found
 
@@ -94,59 +92,41 @@ Systems Engineer with 2+ years of technical experience transitioning into Softwa
 
 ---
 
-## Tools & Technologies
+### Portfolio Structure
 
-### Testing Tools
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat&logo=postman&logoColor=white)
-![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=flat&logo=selenium&logoColor=white)
-![JIRA](https://img.shields.io/badge/JIRA-0052CC?style=flat&logo=jira&logoColor=white)
-![Zephyr Scale](https://img.shields.io/badge/Zephyr_Scale-00A3E0?style=flat&logoColor=white)
-![Trello](https://img.shields.io/badge/Trello-0052CC?style=flat&logo=trello&logoColor=white)
-
-### Technical Skills
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
-![Excel](https://img.shields.io/badge/Excel-217346?style=flat&logo=microsoft-excel&logoColor=white)
-
-### Learning
-![JMeter](https://img.shields.io/badge/Apache_JMeter-D22128?style=flat&logo=apache&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=github-actions&logoColor=white)
-
-### AI-Assisted Development
-![Claude](https://img.shields.io/badge/Claude_Code-191919?style=flat&logo=claude&logoColor=white)
-![Playwright](https://img.shields.io/badge/Playwright_MCP-2EAD33?style=flat&logo=playwright&logoColor=white)
+| Category           | Key Projects                    | Tools                          |
+|--------------------|---------------------------------|--------------------------------|
+| API Testing        | Trello, Restful-Booker          | Postman, Newman, Requests      |
+| Test Automation    | Saucedemo                       | Selenium, Python, Pytest, POM  |
+| Manual Testing     | Agile Travel                    | JIRA, Zephyr Scale, Excel      |
+| Database Testing   | Data Validation                 | MySQL, SQL                     |
+| Performance Testing| In Progress                     | Apache JMeter                  |
 
 ---
 
-## Currently Learning
+### Tools & Technologies
 
-| Skill | Status | Target |
-|-------|--------|--------|
-| Selenium WebDriver — Advanced Patterns | ✅ Completed | Page Object Model, waits, reporting |
-| Selenium WebDriver — Real-world Automation | 🟡 In Progress | Agile Travel site automation |
-| Apache JMeter — Performance Testing | 🟡 In Progress | Load & stress testing |
-| ISTQB Foundation Level Certification | 🟡 In Progress | Q2 2026 |
-| CI/CD Integration (GitHub Actions) | ⚪ Planned | Automated test execution |
+**Testing Tools**: Postman • Selenium WebDriver • JIRA • Zephyr Scale • Trello  
+**Languages**: Python • SQL  
+**Frameworks**: Pytest • Page Object Model  
+**Others**: Git • Excel • AI-Assisted Development (Claude Code, Playwright MCP)
 
 ---
 
-## Skills Overview
-
-| Category | Tools | Proficiency |
-|----------|-------|-------------|
-| **API Testing** | Postman, REST APIs, Newman | Intermediate |
-| **API Automation** | Python Requests, Pytest | Intermediate |
-| **Test Automation** | Selenium WebDriver, Python, Pytest | Intermediate |
-| **Manual Testing** | JIRA, Zephyr Scale, Trello, Excel | Intermediate |
-| **Database Testing** | MySQL, SQL (CTEs, window functions) | Intermediate |
-| **Performance Testing** | Apache JMeter | Beginner — learning |
-| **AI-Assisted QA** | Claude Code (SuperClaude, Speckit, Playwright MCP, GSD) | Intermediate |
+### Currently Learning
+- Apache JMeter (Performance Testing)
+- GitHub Actions (CI/CD)
+- ISTQB Foundation Level Certification (Q2 2026)
 
 ---
 
-## Contact
+### Let's Connect
+I'm actively looking for **Junior QA Engineer** or **Software Tester** positions.
 
-Open to QA Engineer opportunities in Cairo or remote. Feel free to reach out!
+Feel free to reach out if you have any opportunities!
 
 📧 mohmmedayman89@gmail.com
+
+---
+
+**Thank you for visiting my portfolio!**
