@@ -1,132 +1,146 @@
 # QA & Software Testing Portfolio
 
-**Junior QA Engineer** | Manual + API Testing | Selenium Automation
+**Junior QA Engineer** | Manual Testing · API Testing · Selenium Automation
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 ![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![JIRA](https://img.shields.io/badge/JIRA-0052CC?style=for-the-badge&logo=jira&logoColor=white)
 
 ---
 
-### About Me
-**Mohammed Ayman Elbasyoni**  
-QA Engineer | Cairo, Egypt
+## About Me
 
-Passionate QA Engineer with 2+ years of technical experience transitioning into Software Quality Assurance. Hands-on experience in **Manual Testing, API Testing (Postman)**, **Web Automation (Selenium + Python)**, and **SQL** data validation.
+**Mohammed Ayman Elbasyoni** — QA Engineer based in Cairo, Egypt.
 
-Proficient in using AI tools to accelerate test development. Currently strengthening skills in Performance Testing and CI/CD.
+Engineering background turned QA Engineer, with hands-on experience in manual testing, API testing, and Selenium automation. I bring a structured, detail-oriented approach from 2+ years of technical work — including real-world system validation in a hospital environment where reliability was critical.
 
-**Open to**: Full-time Junior QA roles | Freelance Testing projects | Remote opportunities
+I specialize in designing thorough test coverage across positive, negative, and edge cases, with a focus on finding bugs that matter.
 
-📧 mohmmedayman89@gmail.com | [GitHub](https://github.com/MohammedAyman89)
+📧 mohmmedayman89@gmail.com &nbsp;|&nbsp; [LinkedIn](https://www.linkedin.com/in/mohammed-ayman-a96b20148) &nbsp;|&nbsp; Open to full-time, freelance, and remote roles
 
 ---
-### Key Achievements
 
-- ✅ Built Selenium automation framework using Page Object Model (POM)
-- ✅ Designed and executed 40+ API test assertions (Postman)
-- ✅ Found and reported 3 real bugs in RESTful-Booker API
-- ✅ Covered positive, negative, and edge cases across all projects
-- ✅ Implemented automation with reporting, screenshots, and failure handling
+## Key Achievements
+
+- ✅ Built a Selenium automation framework using Page Object Model (POM) — 18 test cases with smoke, regression, and negative markers
+- ✅ Designed a 23-request Postman collection with 40+ assertions covering full CRUD and error handling
+- ✅ Found and documented 3 real bugs in RESTful-Booker API (incorrect status codes: 500 vs 400, 200 vs 401, 405 vs 404)
+- ✅ Reported 10 bugs in manual testing project with full priority classification (3 Highest, 2 High, 3 Medium, 2 Low)
+- ✅ Implemented automation with HTML reporting, screenshots on failure, and parametrized test execution
 
 ---
 
 ## Featured Projects
-### Trello API Testing
 
-**Collection:** 23 requests | 40+ assertions | 5 negative test scenarios
+### 01 · Trello API Testing
+*Postman · REST API · Newman*
 
-**Coverage:**
-- ✅ Full CRUD lifecycle (Boards, Lists, Cards)
-- ✅ Dynamic test data generation (pre-request scripts)
-- ✅ Chained variables for data dependency
-- ✅ Positive & negative testing (401, 400, 404 error handling)
-- ✅ Performance assertions (response time &lt; 1000ms)
+Comprehensive API testing of the Trello REST API covering the full CRUD lifecycle for boards, lists, and cards.
+
+| Metric | Value |
+|--------|-------|
+| Requests | 23 |
+| Assertions | 40+ |
+| Negative Scenarios | 5 (401, 400, 404 error handling) |
+
+**Highlights:**
+- Chained environment variables for data dependency management across requests
+- Dynamic test data generation via pre-request scripts
+- Performance assertions validating response time < 1000ms on all requests
 
 **[View Project →](./01-API-Testing/Trello-API-Testing/)**
 
 ---
 
-### Agile Travel — Manual Testing
+### 02 · Agile Travel — Manual Testing
+*JIRA · Zephyr Scale · Excel*
 
-**Test Cycles:** 1 | Valid & Invalid Scenarios | Full booking flow
+End-to-end manual testing of a flight booking web application covering the full user journey.
 
-**Coverage:**
-- ✅ Flight selection (valid & invalid search scenarios)
-- ✅ Passenger details (correct and missing/invalid data)
-- ✅ Payment process (successful and failed payments)
-- ✅ Test cycle management via JIRA/Zephyr Scale
+| Metric | Value |
+|--------|-------|
+| Test Cases | 33 |
+| Positive Scenarios | 16 |
+| Negative Scenarios | 17 |
+| Bugs Reported | 10 |
+
+**Highlights:**
+- Full booking flow coverage: search, passenger details, and payment
+- Bugs classified by priority with detailed steps to reproduce and expected vs actual results
+- Test cycle managed in JIRA with Zephyr Scale
 
 **[View Project →](./02-Manual-Testing/AgileTravel-AirWay/)**
 
 ---
 
-### Saucedemo — Selenium Test Automation
+### 03 · Saucedemo — Selenium Automation
+*Python · Pytest · Selenium WebDriver · Page Object Model*
 
-**Framework:** Page Object Model | 18 test cases | Python + Pytest
+Automation framework for a full e-commerce user flow using POM architecture and Pytest.
 
-**Coverage:**
-- ✅ Login — 8 scenarios (valid, wrong credentials, empty fields, locked user, SQL injection, trailing spaces)
-- ✅ Inventory — 3 scenarios (product listing, add to cart, open cart)
-- ✅ Cart — 3 scenarios (verify items, remove item, proceed to checkout)
-- ✅ Checkout — 4 scenarios (full flow, empty field validation)
-- ✅ Explicit waits, parametrized tests, screenshot on failure, HTML reports
+| Metric | Value |
+|--------|-------|
+| Test Cases | 18 |
+| Page Classes | 4 (Login, Inventory, Cart, Checkout) |
+| Test Markers | smoke, regression, negative |
+
+**Highlights:**
+- Parametrized negative login tests: SQL injection, empty fields, locked user, trailing spaces
+- Explicit waits, automatic screenshots on failure, HTML report generation
+- Shared fixtures and reusable page components for maintainability
 
 **[View Project →](./03-Selenium/saucedemo/)**
 
 ---
 
-### RESTful-Booker — API Automation
+### 04 · RESTful-Booker — API Automation
+*Python · Requests · Pytest*
 
-**Framework:** Python Requests + Pytest | 22 test cases | 3 bugs found
+Python-based API automation framework testing a real booking API with full auth token management.
 
-**Coverage:**
-- ✅ Full CRUD — GET, POST, PUT, PATCH, DELETE with auth token management
-- ✅ Health check, booking creation, field validation, date verification
-- ✅ Negative testing — missing fields, invalid IDs, unauthorized access, wrong credentials
-- ✅ Bug detection — incorrect status codes (500 vs 400, 200 vs 401, 405 vs 404)
-- ✅ Parametrized tests, failure logging, HTML reports
+| Metric | Value |
+|--------|-------|
+| Test Cases | 22 |
+| Real Bugs Found | 3 |
+| Coverage | GET, POST, PUT, PATCH, DELETE |
+
+**Highlights:**
+- Auth token management with reusable fixture across all authenticated requests
+- Negative tests: missing fields, invalid IDs, unauthorized access, wrong credentials
+- Parametrized tests with failure logging and HTML report generation
 
 **[View Project →](./04-API-Automation/restful-booker/)**
 
 ---
 
-### Portfolio Structure
+## Portfolio Structure
 
-| Category           | Key Projects                    | Tools                          |
-|--------------------|---------------------------------|--------------------------------|
-| API Testing        | Trello, Restful-Booker          | Postman, Newman, Requests      |
-| Test Automation    | Saucedemo                       | Selenium, Python, Pytest, POM  |
-| Manual Testing     | Agile Travel                    | JIRA, Zephyr Scale, Excel      |
-| Database Testing   | Data Validation                 | MySQL, SQL                     |
-| Performance Testing| In Progress                     | Apache JMeter                  |
-
----
-
-### Tools & Technologies
-
-**Testing Tools**: Postman • Selenium WebDriver • JIRA • Zephyr Scale • Trello  
-**Languages**: Python • SQL  
-**Frameworks**: Pytest • Page Object Model  
-**Others**: Git • Excel • AI-Assisted Development (Claude Code, Playwright MCP)
+| # | Category | Projects | Tools |
+|---|----------|----------|-------|
+| 01 | API Testing | Trello API | Postman, Newman |
+| 02 | Manual Testing | Agile Travel | JIRA, Zephyr Scale, Excel |
+| 03 | Test Automation | Saucedemo | Selenium, Python, Pytest, POM |
+| 04 | API Automation | RESTful-Booker | Python Requests, Pytest |
 
 ---
 
-### Currently Learning
-- Apache JMeter (Performance Testing)
-- GitHub Actions (CI/CD)
-- ISTQB Foundation Level Certification (Q2 2026)
+## Tools & Technologies
+
+| Category | Tools |
+|----------|-------|
+| Testing | Postman · Selenium WebDriver · JIRA · Zephyr Scale |
+| Languages | Python · SQL |
+| Frameworks | Pytest · Page Object Model |
+| Database | MySQL — data validation, CTEs, window functions |
+| Other | Git · GitHub · Excel · Newman · XPath · CSS Selectors |
 
 ---
 
-### Let's Connect
-I'm actively looking for **Junior QA Engineer** or **Software Tester** positions.
+## Let's Connect
 
-Feel free to reach out if you have any opportunities!
+I'm actively looking for **Junior QA Engineer** or **Software Tester** positions — full-time, freelance, or remote.
 
-📧 mohmmedayman89@gmail.com
-
----
-
-**Thank you for visiting my portfolio!**
+📧 mohmmedayman89@gmail.com &nbsp;|&nbsp; [LinkedIn](https://www.linkedin.com/in/mohammed-ayman-a96b20148)
